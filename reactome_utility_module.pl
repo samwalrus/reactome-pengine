@@ -45,7 +45,7 @@
 
 
 :- use_module(pre_links).
-:- use_module(calc_mods/probes).
+:- use_module(probes).
 :- use_module(pathway_link).
 :- use_module(library(semweb/rdf11)).
 

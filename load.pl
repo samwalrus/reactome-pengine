@@ -42,7 +42,7 @@ http:location(root, '/reactome-pengine', []).
 
 :- multifile sandbox:safe_primitive/1.
 sandbox:safe_primitive(rdf11:rdf(_,_,_)).
-sandbox:safe_primitive(rdf_prefixes:rdf_prefix(_,_)). %New
+%sandbox:safe_primitive(rdf_prefixes:rdf_prefix(_,_)). %New
 
 
 sandbox:safe_primitive(rdf11:rdf_iri(_)).
@@ -77,7 +77,7 @@ sandbox:safe_primitive(rdf11:rdf_iri(_)).
 
 :- use_module('logging.pl').
 
-
+%:- doc_server(4000).
 
 %sandbox:safe_primitive(reactome_utility_module:add_fact(_)).
 

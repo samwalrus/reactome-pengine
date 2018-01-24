@@ -1,4 +1,4 @@
-FROM swipl:7.7.2
+FROM swipl:7.5.12
 
 # Run the image as a non-root user
 RUN useradd -m -s /bin/sh myuser
@@ -7,11 +7,11 @@ WORKDIR /home/myuser
 
 ADD reactome_utility_module.pl $HOME
 ADD load.pl $HOME
-ADD Homoe_sapiens.owl $HOME
+ADD Homo_sapiens.owl $HOME
 ADD logging.pl $HOME
 ADD pre_links.pl $HOME
-ADD calc_mods/probes.pl $HOME/calc_mods
-ADD pathway_links.pl $HOME
+ADD probes.pl $HOME
+ADD pathway_link.pl $HOME
 ADD README.md $HOME
 
 ENV PORT 4000
