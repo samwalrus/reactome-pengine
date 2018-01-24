@@ -348,7 +348,7 @@ ridComplex_components(ComplexId,Components):-
 
 /** ridComponent_child(?RidComponent:atom, ?Child:atom) is nondet
  *
- * Releate either a Reactome protein set identifier or
+ * Relate either a Reactome protein set identifier or
  * a Reactome complex identifier, to a subcomponent
  * that is one level down.
  * For example:
@@ -507,7 +507,7 @@ allEdges(Edges,Size):-
 /** ridPathway_component(?RidPathway:atom, ?RidComponent:atom) is nondet
  *
  *  Relate a Reactome pathway identifier to a component in the pathway.
- *  This does not search recursivily for components of subpathway. Use:
+ *  This does not search recursively for components of subpathway. Use:
  *  ridPathway_descendantRidReaction/2 for that.
  *  Example:
  *
