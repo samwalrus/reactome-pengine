@@ -3,7 +3,7 @@
 :- use_module(library(http/http_host)).
 :- use_module(library(http/http_path)).
 
-:- set_setting_default(http:public_host,   'apps.nms.kcl.ac.uk').
+%:- set_setting_default(http:public_host,   'apps.nms.kcl.ac.uk').
 :- set_setting_default(http:public_port,   443).
 :- set_setting_default(http:public_scheme, https).
 
