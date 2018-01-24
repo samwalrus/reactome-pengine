@@ -1,0 +1,1 @@
+./codeblock5.pl < proteins.txt | grep 1565484_x_at
