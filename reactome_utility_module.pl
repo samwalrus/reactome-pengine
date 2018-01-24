@@ -88,7 +88,7 @@ rid_type_iri(Rid, ClassName, Iri) :-
 /**
  * rid_name(?Rid:atom, ?Name:string) is nondet
  *
- * Relates Reactome identifiers to their name. It can
+ * Relate Reactome identifiers to their name. It can
  * be used in both directions or to generate. For example:
  *
  * ?-rid_name(R,Name).
@@ -225,7 +225,7 @@ ridReaction_input(Rid,I):-
 
 /** ridReaction_inputs(?Rid:atom, ?Inputs:list) is nondet
  *
- * Relates a Reactome identifier for a reaction to a
+ * Relate a Reactome identifier for a reaction to a
  * list of top level inputs (i.e. these input do not include
  * subcomponents of complexes and sets).
  * For example:
@@ -275,7 +275,7 @@ ridReaction_outputs(Rid,Outputs):-
 
 /** ridProteinSet_component(?ProteinSet:atom, ?Rid:atom) is nondet
  *
- * Relates a Reactome identifier of a protein set to a
+ * Relate a Reactome identifier of a protein set to a
  * component of that protein set.
  * For example:
  *
@@ -299,7 +299,7 @@ ridProteinSet_component(ProteinSet, Component) :-
 
 /** ridProteinSet_components(?RidProteinSet:atom, ?Components:list) is nondet
  *
- *  Relates a Reactome identifier of a protein set to a list of
+ *  Relate a Reactome identifier of a protein set to a list of
  *  components.
  *  For example:
  *
@@ -316,7 +316,7 @@ ridProteinSet_components(ProteinSet, Components) :-
 
 /** ridComplex_component(?RidComplex:atom, ?Rid:atom) is nondet
  *
- * Relates a Reactome identifier of a protein complex to a
+ * Relate a Reactome identifier of a protein complex to a
  * component.
  * For example:
  *
@@ -333,7 +333,7 @@ ridComplex_component(ComplexId,ComponentId):-
 
 /** ridComplex_components(?RidComplexId:atom, ?Components:list) is nondet
  *
- *  Relates a Reactome identifier of a protein complex to a list of
+ *  Relate a Reactome identifier of a protein complex to a list of
  *  components.
  *  For example:
  *
@@ -389,7 +389,7 @@ ridComponent_descendant(Rid,Des):-
 
 /** ridComponent_descendants(?Rid:atom, ?Dess:List) is nondet
  *
- * Relates a protein set or complex identifier to
+ * Relate a protein set or complex identifier to
  * all subcomponents recursively.
  * For example:
  */
