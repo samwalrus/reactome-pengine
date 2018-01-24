@@ -1,3 +1,7 @@
+/** <module> Internal File
+*/
+
+
 :- use_module(library(doc_http), []).
 :- use_module(library(settings)).
 :- use_module(library(http/http_host)).

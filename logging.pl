@@ -32,6 +32,9 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
+/** <module> Internal File
+*/
+
 :- module(swish_logging,
 	  [
 	  ]).
@@ -40,16 +43,7 @@
 :- use_module(library(settings)).
 :- use_module(library(apply)).
 
-/** <module> Add SWISH query execution to the HTTP log file
 
-Add a line of the format below to  the HTTP log file. The src_text(Text)
-option of Options is replaced by   `Hash-Text`  for the first occurrence
-and just `Hash` for subsequent occurrences.
-
-  ==
-  pengine(Time, create(Pengine, Application, Options))
-  ==
-*/
 
 :- setting(swish:logging, boolean, true,
 	   "Enable/disable logging of SWISH query execution").

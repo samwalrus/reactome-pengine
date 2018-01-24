@@ -226,7 +226,7 @@ ridReaction_input(Rid,I):-
 /** ridReaction_inputs(?Rid:atom, ?Inputs:list) is nondet
  *
  * Relates a Reactome identifier for a reaction to a
- * list of top level inputs. (i.e. does not include
+ * list of top level inputs (i.e. these input do not include
  * subcomponents of complexes and sets).
  * For example:
  *
@@ -261,8 +261,8 @@ ridReaction_output(Rid,O):-
 
 /** ridReaction_outputs(?Rid:atom, ?Outputs:list) is nondet
  *
- * Relates a reaction to a list of top level outputs (i.e
- * does not include subcomponents of complexes and sets).
+ * Relate a Reactome identifier for a reaction to a list of top level outputs (i.e
+ * these outputs do not include subcomponents of complexes and sets).
  *
  * ?- ridReaction_outputs(Rid,Outputs).
  *
@@ -348,7 +348,7 @@ ridComplex_components(ComplexId,Components):-
 
 /** ridComponent_child(?RidComponent:atom, ?Child:atom) is nondet
  *
- * Releates either a Reactome protein set identifier or
+ * Releate either a Reactome protein set identifier or
  * a Reactome complex identifier, to a subcomponent
  * that is one level down.
  * For example:
@@ -367,7 +367,7 @@ ridComponent_child(Rid,Child):-
 
 /** ridComponent_descendant(?RidComponent:atom, ?Descendant:atom) is nondet
  *
- * Releates either a Reactome protein set identifier or
+ * Relate either a Reactome protein set identifier or
  * a Reactome complex identifier, to a subcomponent
  * any level down.
  * For example:
@@ -398,7 +398,7 @@ ridComponent_descendants(Rid,Dess):-
 
 /** ridComponent_descendantSetOrComplex(?RidComponent:atom, ?Des:atom) is nondet
  *
- * Relates a protein set or complex identifier to a subset or complex.
+ * Relate a protein set or complex identifier to a subset or complex.
  * For example:
  *
  * ?- ridComponent_descendantSetOrComplex(Rid,Des).
@@ -416,7 +416,7 @@ ridComponent_descendantSetOrComplex(Rid,Des):-
 
 /** ridComponent_childSimpleProtein(?Rid:atom,?RidProtein:atom) is nondet
  *
- * Relates a protein set or complex idenifier to a subcomponent
+ * Relate a protein set or complex idenifier to a subcomponent
  * that is a simple protein (i.e is not a set or complex).
  * For example:
  *
@@ -433,7 +433,7 @@ ridComponent_childSimpleProtein(Rid,Protein):-
 
 /** rid_location(?Rid:atom,?Location:string) is nondet
  *
- * Relates a Reactome identifier to a physical location in the cell.
+ * Relate a Reactome identifier to a physical location in the cell.
  * For example:
  *
  * ?- rid_location(Rid,Location).
@@ -452,7 +452,7 @@ rid_location(Rid,Location):-
 
 /** ridReaction_controller_type(?Rid:atom, ?RidController: atom, ?Type:string) is nondet
  *
- * Relates a Reactome reaction identifier to its controller and the
+ * Relate a Reactome reaction identifier to its controller and the
  * type of that controller.
  * For example:
  *
@@ -506,7 +506,7 @@ allEdges(Edges,Size):-
 
 /** ridPathway_component(?RidPathway:atom, ?RidComponent:atom) is nondet
  *
- *  Relates a Reactome pathway identifier to a component in the pathway.
+ *  Relate a Reactome pathway identifier to a component in the pathway.
  *  This does not search recursivily for components of subpathway. Use:
  *  ridPathway_descendantRidReaction/2 for that.
  *  Example:
@@ -524,7 +524,7 @@ ridPathway_component(RidPathway,RidComponent):-
 
 /** ridPathway_descendantRidReaction(?RidPathway:atom, ?RidReaction:atom) is nondet
  *
- *  Relates a Reactome pathway identifier to a subcomponent in the
+ *  Relate a Reactome pathway identifier to a subcomponent in the
  *  pathway including recursion on subpathways.
  *  Example:
  *
@@ -562,7 +562,7 @@ ridPathwayAtomic(RidPathway):-
 
 /** ridPathway_reactions(?RidPathway:atom, ?Reactions:list) is nondet
  *
- * Relates a Reactome pathway identifier to all component reactions.
+ * Relate a Reactome pathway identifier to all component reactions.
  * Including reactions of any subpathways(recursively).
  * For example:
  *
@@ -601,18 +601,14 @@ key_keypair(X,X-value).
 
 /** ridPathway_links(?RidPathway:atom, ?Links:list) is nondet
  *
- * Relates a Reactome pathway identifier to the links (edges) in that
- * subgraph.
- * Each item
- * in the
- * list is a
- * term like
- * ridReaction_ridLink_type_ridReaction('BiochemicalReaction6',
+ * Relate a Reactome pathway identifier to its constituent links (edges).
+ * Each item in the list of links is a  ridReaction_ridLink_type_ridReaction/4 term.
+ * For example ridReaction_ridLink_type_ridReaction('BiochemicalReaction6',
  * 'Complex18', precedes, 'BiochemicalReaction7' )
- * Which means that BiochemicalReaction6 is linked by
- * Complex 18 via a precedes link to BiochemicalReaction7
+ * states that BiochemicalReaction6 is linked by
+ * Complex 18 via a precedes link to BiochemicalReaction7.
  *
- * An example:
+ * Example:
  *
  * ?- ridPathway_links(RidPathway,Links).
  *
@@ -643,7 +639,7 @@ setorcomplex(Rid):-
 
 /** ridReaction_inputProbelist(?RidReaction:atom, ?InputProbes:list) is det
  *
- * Relates a Reactome reaction identifer to the set of affymetrix
+ * Relate a Reactome reaction identifer to the set of affymetrix
  * probes that are used for the proteins involved in the inputs to
  * that reaction.
  * For example:

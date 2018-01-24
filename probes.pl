@@ -2,7 +2,7 @@
 
 /** ridProtein_probelist(?RidProtein:atom,?Probes:list) is det
  *
- *  Relates a Reactome protein identifier to the list of Affy probes for that Protein. 
+ *  Relate a Reactome protein identifier to the list of Affy probes for that Protein. 
  *
  *  Example:
  *  
